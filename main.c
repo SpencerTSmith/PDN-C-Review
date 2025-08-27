@@ -54,13 +54,13 @@ void do_something_with_slice_struct(struct Int_Array_Slice slice)
 
 // Maybe a little more ergonomic:
 /*
-   typedef struct Int_Array_Slice_t Int_Array_Slice;
-   struct Int_Array_Slice_t
-   {
-   int *data;
-   int count;
-   };
-   void do_something_with_slice(Int_Array_Slice slice);
+typedef struct Int_Array_Slice_t Int_Array_Slice;
+struct Int_Array_Slice_t
+{
+int *data;
+int count;
+};
+void do_something_with_slice(Int_Array_Slice slice);
 */
 
 int main(int argc, char **argv)
