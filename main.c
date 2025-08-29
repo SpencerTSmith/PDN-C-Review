@@ -57,8 +57,8 @@ void do_something_with_slice_struct(struct Int_Array_Slice slice)
 typedef struct Int_Array_Slice_t Int_Array_Slice;
 struct Int_Array_Slice_t
 {
-int *data;
-int count;
+  int *data;
+  int count;
 };
 void do_something_with_slice(Int_Array_Slice slice);
 */
@@ -82,8 +82,8 @@ int main(int argc, char **argv)
   // int *pointer_to_null = NULL;
   // printf("And just a quick null dereference: %d", *pointer_to_null); // Uh oh
 
-  /*
   // Helpful NULL check idiom
+  /*
   int *pointer_to_null = NULL;
   if (pointer_to_null != NULL)
   {
@@ -106,7 +106,7 @@ int main(int argc, char **argv)
 
     for (int i = 0; i < 4; i++)
     {
-    printf("Array at [%d] is %d\n", i, array[i]);
+      printf("Array at [%d] is %d\n", i, array[i]);
     }
 
     printf("And the value of array is? %p\n", array);
@@ -239,7 +239,7 @@ int main(int argc, char **argv)
 
   // Undefined behavior
   /*
-  char stack_string[2] = {'h', 'i'};
+  char stack_string[2] = {'h', 'i' };
   char poison[4] = {'X','X','X','X'}; // Uh oh
   printf("Stack string is %s ... wait what?\n", stack_string);
   */
@@ -305,13 +305,13 @@ int main(int argc, char **argv)
   fclose(input_file); // Remember!
   */
 
-  /*
   FILE *output_file = fopen("output.txt", "w");
 
-  const char *message_to_file = "Hello file!";
+  const char *message_to_file = "Hello fiile!";
   fprintf(output_file, "%s", message_to_file); // Notice... (f)printf?
 
   fclose(output_file); // Remember!
+  /*
   */
 
   // NOTE:
@@ -331,11 +331,11 @@ int main(int argc, char **argv)
   }
   */
 
-  // You can imagine reading these args in and changing the way
-  // the program runs based on the values of these arguments
+    // You can imagine reading these args in and changing the way
+    // the program runs based on the values of these arguments
 
-  /*
   // atoi == Ascii to Integer
+  /*
   int length = atoi(argv[1]); // Probably want something more robust in non trivial program
   int *runtime_sized_array = calloc(length, sizeof(int));
 
